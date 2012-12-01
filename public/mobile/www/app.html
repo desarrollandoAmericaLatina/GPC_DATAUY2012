@@ -6,6 +6,10 @@
         <title>
         </title>
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
+	 <!--[if lte IE 8]>
+	     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" />
+	 <![endif]-->
         <link rel="stylesheet" href="my.css" />
         <style>
             /* App custom styles */
@@ -14,8 +18,10 @@
         </script>
         <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
         </script>
+        <script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>
         <script src="my.js">
         </script>
+        
     </head>
     <body>
         <!-- home -->
@@ -114,6 +120,41 @@
         <!-- productos -->
         <div data-role="page" id="page12">
             <div data-role="content">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Productos
+                    </li>
+                    <li data-theme="c">
+                        <a href="#page10" data-transition="slide">
+                            Arroz
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#page10" data-transition="slide">
+                            Pulpon
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#page10" data-transition="slide">
+                            Sal
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#page10" data-transition="slide">
+                            Azucar
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#page10" data-transition="slide">
+                            Manzana
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#page10" data-transition="slide">
+                            Bananas
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
                 <ul>
@@ -137,7 +178,51 @@
         </div>
         <!-- comercios -->
         <div data-role="page" id="page13">
+            <div data-role="content" id="test">
+            
+                <div id="map" style="height:450px"></div>
+            </div>
+            <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+                <ul>
+                    <li>
+                        <a href="#page13" data-theme="" data-icon="home">
+                            Comercios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page11" data-theme="" data-icon="grid">
+                            Lista
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page12" data-theme="" data-icon="search">
+                            Productos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- agregar-producto -->
+        <div data-role="page" id="page15">
             <div data-role="content">
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="searchinput1">
+                        </label>
+                        <input name="" id="searchinput1" placeholder="" value="" type="search" />
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="textinput1">
+                            Cantidad
+                        </label>
+                        <input name="" id="textinput1" placeholder="" value="" type="text" />
+                    </fieldset>
+                </div>
+                <a data-role="button" data-theme="b" href="#page11" data-icon="grid" data-iconpos="right">
+                    Agregar
+                </a>
             </div>
             <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
                 <ul>
@@ -556,7 +641,30 @@
             </div>
         </div>
         <script>
-            //App custom javascript
-        </script>
+$('#test').live('pageprueba', function(){
+		var map = L.map('map').setView([-34.87, -56.16], 20);
+
+		L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
+		}).addTo(map);
+
+
+		L.marker([-34.88, -56.17]).addTo(map)
+			.bindPopup("<b>Ta-Ta!</b><br />I am a supermarket.").openPopup();
+
+		
+		var popup = L.popup();
+
+		function onMapClick(e) {
+			popup
+				.setLatLng(e.latlng)
+				.setContent("You clicked the map at " + e.latlng.toString())
+				.openOn(map);
+		}
+
+		map.on('click', onMapClick);
+});
+	</script>
     </body>
 </html>
