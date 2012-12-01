@@ -2,26 +2,28 @@ class ListsController < ApplicationController
   def index
   end
   
+  # recibe un array como parametro con las IDs de los productos a comprar
+  # y devuelve el supermercado con mejores precios de acuerdo a
+  # la lista de esos productos
   def calculate
-  	list = [1,3]
+  	list_of_products = params[:list]
   	
   	markets = Comercio.all
-  	prices = []
+  	
+  	products = []
+  	result = {}
   	
   	markets.each do |market|
-  		subtotal = []
-  		list.each do |producto|
-  			price = Precio.where("producto_id = ? AND comercio_id = ?", producto, market.id).first
-  			subtotal.push price
+  		products = Precio.where(:producto_id => list_of_products).where("comercio_id = ?", market.id)
+  		result[market.id] = 0
+  		products.each do |product|
+  			result[market.id] += product.price
   		end
-  		
-  		total = 0
-  		subtotal.each do |price|
-  			total = total + price
-  		end
-  		prices.push total
   	end
-  	
-  	render :json => prices
+
+  	key, value = result.sort{|a,b| a[1] <=> b[1]}.first
+  	best_market = Comercio.find(key)
+
+  	render :json => best_market
   end
 end
