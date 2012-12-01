@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	-->
+	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+    <link rel="stylesheet" href="resources/jquery.mobile-1.1.0.min.css" />
+    <link rel="stylesheet" href="my.css" />
+    <style>
+    /* App custom styles */
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="scripts/cordova-1.5.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="scripts/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="scripts/jquery.mobile-1.1.0.min.js"></script>
+    <script src="my.js"></script>
+    <script type="text/javascript">
+
+
+	// If you want to prevent dragging, uncomment this section
+	/*
+	function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false);
+	*/
+	
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	/*
+	function handleOpenURL(url)
+	{
+		// TODO: do something with the url passed in.
+	}
+	*/
+	
+	function onBodyLoad()
+	{		
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	/* When this function is called, Cordova has been initialized and is ready to roll */
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	function onDeviceReady()
+	{
+		// do your thing!
+		//navigator.notification.alert("Cordova is working")
+	}
+        function redirectionTo(){
+            $.mobile.changePage("app.html");
+        }
+    </script>
+
+
+  </head>
+  <body onload="onBodyLoad()">
+      <!-- inicio -->
+      <div data-role="page" data-theme="e" id="page1">
+          <div data-theme="b" data-role="header">
+              <h4>
+                  Distry Logik
+              </h4>
+          </div>
+          <div data-role="content">
+              <div class="split-wrapper">
+                  <div class="content-secondary">
+                      <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                          <li data-role="list-divider" role="heading">
+                              Mi Info
+                          </li>
+                          <li data-theme="c">
+                              <a href="#page1" data-transition="slide">
+                                  Clientes
+                                  <span class="ui-li-count">
+                                      45
+                                  </span>
+                              </a>
+                          </li>
+                          <li data-theme="c">
+                              <a href="#page1" data-transition="slide">
+                                  Productos
+                                  <span class="ui-li-count">
+                                      450
+                                  </span>
+                              </a>
+                          </li>
+                          <li data-theme="c">
+                              <a href="#page1" data-transition="slide">
+                                  Hoja de Ruta
+                              </a>
+                          </li>
+                          <li data-theme="c">
+                              <a href="#page1" data-transition="slide">
+                                  Planillas de Venta
+                              </a>
+                          </li>
+                          <li data-role="list-divider" role="heading">
+                              Ventas
+                          </li>
+                          <li data-theme="c">
+                              <a href="#page1" data-transition="slide">
+                                  Ventas en ruta
+                                  <span class="ui-li-count">
+                                      5
+                                  </span>
+                              </a>
+                          </li>
+                          <li data-theme="c">
+                              <a href="#page1" data-transition="slide">
+                                  Realizar una venta
+                              </a>
+                          </li>
+                          <li data-theme="c">
+                              <a href="#page1" data-transition="slide">
+                                  Ventas realizadas
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="content-primary">
+                      <div class="ui-grid-d">
+                          <div class="ui-block-a">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <em>
+                                      <span style="color: rgb(74, 138, 181); " data-mce-style="color: #4a8ab5;">
+                                          <b>
+                                              Nro. Cliente
+                                          </b>
+                                      </span>
+                                  </em>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-b">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <span style="background-color: rgb(255, 255, 255); color: rgb(74, 138, 181); " data-mce-style="background-color: #ffffff; color: #4a8ab5;">
+                                      <em>
+                                          <b>
+                                              Nombre
+                                          </b>
+                                      </em>
+                                  </span>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-c">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <span style="color: rgb(74, 138, 181); ">
+                                      <em>
+                                          <b>
+                                              Venta
+                                          </b>
+                                      </em>
+                                  </span>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-d">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <em>
+                                      <span style="color: rgb(74, 138, 181); " data-mce-style="color: #4a8ab5;">
+                                          <b>
+                                              Saldo
+                                          </b>
+                                      </span>
+                                  </em>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-e">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <em>
+                                      <span style="color: rgb(74, 138, 181); " data-mce-style="color: #4a8ab5;">
+                                          <b>
+                                              Caja
+                                          </b>
+                                      </span>
+                                  </em>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-a">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <b>
+                                      45773
+                                  </b>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-b">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <b>
+                                      Super Ejido
+                                  </b>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-c">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <b>
+                                      3570
+                                  </b>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-d">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <b>
+                                      2500
+                                  </b>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-e">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <b>
+                                      4070
+                                  </b>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-a">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <b>
+                                      34789
+                                  </b>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-b">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <b>
+                                      Super Las Palomas
+                                  </b>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-c">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <b>
+                                      4585
+                                  </b>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-d">
+                              <div>
+                                  <p style="text-align: center; ">
+                                  <b>
+                                      0
+                                  </b>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-e">
+                              <div>
+                                  <p>
+                                  <b>
+                                      4585
+                                  </b>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="ui-block-a">
+                          </div>
+                          <div class="ui-block-b">
+                          </div>
+                          <div class="ui-block-c">
+                          </div>
+                          <div class="ui-block-d">
+                          </div>
+                          <div class="ui-block-e">
+                          </div>
+                          <div class="ui-block-a">
+                          </div>
+                          <div class="ui-block-b">
+                          </div>
+                          <div class="ui-block-c">
+                          </div>
+                          <div class="ui-block-d">
+                          </div>
+                          <div class="ui-block-e">
+                          </div>
+                          <div class="ui-block-a">
+                          </div>
+                          <div class="ui-block-b">
+                          </div>
+                          <div class="ui-block-c">
+                          </div>
+                          <div class="ui-block-d">
+                          </div>
+                          <div class="ui-block-e">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+              <ul>
+                  <li>
+                      <a href="#page1" data-theme="" data-icon="home">
+                          Inicio
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page5" data-theme="" data-icon="info">
+                          Clientes
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page6" data-theme="" data-icon="search">
+                          Hoja Ruta
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page8" data-theme="" data-icon="grid">
+                          Venta
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <!-- login -->
+      <div data-role="page" id="page10">
+          <div data-role="content">
+          </div>
+          <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+              <ul>
+                  <li>
+                      <a href="#page1" data-theme="" data-icon="home">
+                          Inicio
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page5" data-theme="" data-icon="info">
+                          Clientes
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page6" data-theme="" data-icon="search">
+                          Hoja Ruta
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page8" data-theme="" data-icon="grid">
+                          Venta
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <!-- venta -->
+      <div data-role="page" id="page8">
+          <div data-role="content">
+          </div>
+          <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+              <ul>
+                  <li>
+                      <a href="#page1" data-theme="" data-icon="home">
+                          Inicio
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page5" data-theme="" data-icon="info">
+                          Clientes
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page6" data-theme="" data-icon="search">
+                          Hoja Ruta
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page8" data-theme="" data-icon="grid">
+                          Venta
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <!-- planillaVentas -->
+      <div data-role="page" id="page7">
+          <div data-role="content">
+          </div>
+          <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+              <ul>
+                  <li>
+                      <a href="#page1" data-theme="" data-icon="home">
+                          Inicio
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page5" data-theme="" data-icon="info">
+                          Clientes
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page6" data-theme="" data-icon="search">
+                          Hoja Ruta
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page8" data-theme="" data-icon="grid">
+                          Venta
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <!-- hojaRuta -->
+      <div data-role="page" id="page6">
+          <div data-role="content">
+              <img src="https://maps.googleapis.com/maps/api/staticmap?center=Madison, WI&amp;zoom=14&amp;size=288x450&amp;markers=Madison, WI&amp;sensor=false" width="288" height="450" />
+          </div>
+          <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+              <ul>
+                  <li>
+                      <a href="#page1" data-theme="" data-icon="home">
+                          Inicio
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page5" data-theme="" data-icon="info">
+                          Clientes
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page6" data-theme="" data-icon="search">
+                          Hoja Ruta
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page8" data-theme="" data-icon="grid">
+                          Venta
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <!-- clientes -->
+      <div data-role="page" id="page5">
+          <div data-role="content">
+          </div>
+          <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+              <ul>
+                  <li>
+                      <a href="#page1" data-theme="" data-icon="home">
+                          Inicio
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page5" data-theme="" data-icon="info">
+                          Clientes
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page6" data-theme="" data-icon="search">
+                          Hoja Ruta
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page8" data-theme="" data-icon="grid">
+                          Venta
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <script>
+          //App custom javascript
+          </script>
+  </body>
+</html>

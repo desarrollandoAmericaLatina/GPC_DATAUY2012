@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
+        </script>
+        <script src="my.js">
+        </script>
+    </head>
+    <body>
+        <!-- home -->
+        <div data-role="page" id="page10">
+            <div data-role="content">
+            </div>
+            <div id="menu" data-role="tabbar" data-iconpos="bottom" data-theme="b">
+                <ul>
+                    <li>
+                        <a href="#page13" data-theme="" data-icon="home">
+                            Comercios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page11" data-theme="" data-icon="grid">
+                            Lista
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page12" data-theme="" data-icon="search">
+                            Productos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- lista -->
+        <div data-role="page" id="page11">
+            <div data-role="content">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Lista de Compras
+                    </li>
+                    <li data-theme="c">
+                        <a href="#page10" data-transition="slide">
+                            Pulpon de Asado
+                            <span class="ui-li-count">
+                                2.5 kgs.
+                            </span>
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#page10" data-transition="slide">
+                            Cerveza
+                            <span class="ui-li-count">
+                                6 lts.
+                            </span>
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#page10" data-transition="slide">
+                            Vino
+                            <span class="ui-li-count">
+                                1 lts.
+                            </span>
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#page10" data-transition="slide">
+                            Lechuga
+                            <span class="ui-li-count">
+                                1 un.
+                            </span>
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#page10" data-transition="slide">
+                            Button
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-theme="b" href="#page11">
+                    Agregar Producto
+                </a>
+            </div>
+            <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+                <ul>
+                    <li>
+                        <a href="#page13" data-theme="" data-icon="home">
+                            Comercios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page11" data-theme="" data-icon="grid">
+                            Lista
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page12" data-theme="" data-icon="search">
+                            Productos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- productos -->
+        <div data-role="page" id="page12">
+            <div data-role="content">
+            </div>
+            <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+                <ul>
+                    <li>
+                        <a href="#page13" data-theme="" data-icon="home">
+                            Comercios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page11" data-theme="" data-icon="grid">
+                            Lista
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page12" data-theme="" data-icon="search">
+                            Productos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- comercios -->
+        <div data-role="page" id="page13">
+            <div data-role="content">
+            </div>
+            <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+                <ul>
+                    <li>
+                        <a href="#page13" data-theme="" data-icon="home">
+                            Comercios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page11" data-theme="" data-icon="grid">
+                            Lista
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page12" data-theme="" data-icon="search">
+                            Productos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- clientes -->
+        <div data-role="page" id="page5">
+            <div data-role="content">
+            </div>
+            <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+                <ul>
+                    <li>
+                        <a href="#page1" data-theme="" data-icon="home">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page5" data-theme="" data-icon="info">
+                            Clientes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page6" data-theme="" data-icon="search">
+                            Hoja Ruta
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page8" data-theme="" data-icon="grid">
+                            Venta
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- inicio -->
+        <div data-role="page" id="page1">
+            <div data-theme="b" data-role="header">
+                <h4>
+                    Distry Logik
+                </h4>
+            </div>
+            <div data-role="content">
+                <div class="split-wrapper">
+                    <div class="content-secondary">
+                        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                            <li data-role="list-divider" role="heading">
+                                Mi Info
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Clientes
+                                    <span class="ui-li-count">
+                                        45
+                                    </span>
+                                </a>
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Productos
+                                    <span class="ui-li-count">
+                                        450
+                                    </span>
+                                </a>
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Hoja de Ruta
+                                </a>
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Planillas de Venta
+                                </a>
+                            </li>
+                            <li data-role="list-divider" role="heading">
+                                Ventas
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Ventas en ruta
+                                    <span class="ui-li-count">
+                                        5
+                                    </span>
+                                </a>
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Realizar una venta
+                                </a>
+                            </li>
+                            <li data-theme="c">
+                                <a href="#page1" data-transition="slide">
+                                    Ventas realizadas
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-primary">
+                        <div class="ui-grid-d">
+                            <div class="ui-block-a">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <em>
+                                            <span style="color: rgb(74, 138, 181); " data-mce-style="color: #4a8ab5;">
+                                                <b>
+                                                    Nro. Cliente
+                                                </b>
+                                            </span>
+                                        </em>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <span style="background-color: rgb(255, 255, 255); color: rgb(74, 138, 181); " data-mce-style="background-color: #ffffff; color: #4a8ab5;">
+                                            <em>
+                                                <b>
+                                                    Nombre
+                                                </b>
+                                            </em>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-c">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <span style="color: rgb(74, 138, 181); ">
+                                            <em>
+                                                <b>
+                                                    Venta
+                                                </b>
+                                            </em>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-d">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <em>
+                                            <span style="color: rgb(74, 138, 181); " data-mce-style="color: #4a8ab5;">
+                                                <b>
+                                                    Saldo
+                                                </b>
+                                            </span>
+                                        </em>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-e">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <em>
+                                            <span style="color: rgb(74, 138, 181); " data-mce-style="color: #4a8ab5;">
+                                                <b>
+                                                    Caja
+                                                </b>
+                                            </span>
+                                        </em>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-a">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <b>
+                                            45773
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <b>
+                                            Super Ejido
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-c">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <b>
+                                            3570
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-d">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <b>
+                                            2500
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-e">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <b>
+                                            4070
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-a">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <b>
+                                            34789
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <b>
+                                            Super Las Palomas
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-c">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <b>
+                                            4585
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-d">
+                                <div>
+                                    <p style="text-align: center; ">
+                                        <b>
+                                            0
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-e">
+                                <div>
+                                    <p>
+                                        <b>
+                                            4585
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ui-block-a">
+                            </div>
+                            <div class="ui-block-b">
+                            </div>
+                            <div class="ui-block-c">
+                            </div>
+                            <div class="ui-block-d">
+                            </div>
+                            <div class="ui-block-e">
+                            </div>
+                            <div class="ui-block-a">
+                            </div>
+                            <div class="ui-block-b">
+                            </div>
+                            <div class="ui-block-c">
+                            </div>
+                            <div class="ui-block-d">
+                            </div>
+                            <div class="ui-block-e">
+                            </div>
+                            <div class="ui-block-a">
+                            </div>
+                            <div class="ui-block-b">
+                            </div>
+                            <div class="ui-block-c">
+                            </div>
+                            <div class="ui-block-d">
+                            </div>
+                            <div class="ui-block-e">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+                <ul>
+                    <li>
+                        <a href="#page1" data-theme="" data-icon="home">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page5" data-theme="" data-icon="info">
+                            Clientes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page6" data-theme="" data-icon="search">
+                            Hoja Ruta
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page8" data-theme="" data-icon="grid">
+                            Venta
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- venta -->
+        <div data-role="page" id="page8">
+            <div data-role="content">
+            </div>
+            <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+                <ul>
+                    <li>
+                        <a href="#page1" data-theme="" data-icon="home">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page5" data-theme="" data-icon="info">
+                            Clientes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page6" data-theme="" data-icon="search">
+                            Hoja Ruta
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page8" data-theme="" data-icon="grid">
+                            Venta
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- planillaVentas -->
+        <div data-role="page" id="page7">
+            <div data-role="content">
+            </div>
+            <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+                <ul>
+                    <li>
+                        <a href="#page1" data-theme="" data-icon="home">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page5" data-theme="" data-icon="info">
+                            Clientes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page6" data-theme="" data-icon="search">
+                            Hoja Ruta
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page8" data-theme="" data-icon="grid">
+                            Venta
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- hojaRuta -->
+        <div data-role="page" id="page6">
+            <div data-role="content">
+                <img src="https://maps.googleapis.com/maps/api/staticmap?center=Madison, WI&amp;zoom=14&amp;size=288x450&amp;markers=Madison, WI&amp;sensor=false" width="288" height="450" />
+            </div>
+            <div data-role="tabbar" data-iconpos="bottom" data-theme="b">
+                <ul>
+                    <li>
+                        <a href="#page1" data-theme="" data-icon="home">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page5" data-theme="" data-icon="info">
+                            Clientes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page6" data-theme="" data-icon="search">
+                            Hoja Ruta
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page8" data-theme="" data-icon="grid">
+                            Venta
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            //App custom javascript
+        </script>
+    </body>
+</html>
