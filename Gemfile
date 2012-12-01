@@ -24,3 +24,6 @@ gem 'oauth2'
 # helpers
 gem 'paperclip', '~> 2.5.0'
 gem "aws-sdk"
+
+# Geocode
+gem 'geocoder'
