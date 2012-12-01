@@ -1,0 +1,10 @@
+# Use the README file as a reference to customize settings.
+
+Precio:
+  fields:
+    default: producto_id, comercio_id, price
+    form: producto_id, comercio_id, price
+    options:
+      selectors: producto_id, comercio_id
+  relationships: 
+  application: Application

@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Comercio:
+  fields:
+    default: name, lat, long
+    form: name, lat, long
+  relationships: 
+  application: Application

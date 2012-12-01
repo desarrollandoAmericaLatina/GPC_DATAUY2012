@@ -1,0 +1,13 @@
+defaults: &defaults
+  adapter: postgresql
+  username: postgres
+  password: dolbap
+  host: localhost
+
+development:
+  <<: *defaults
+  database: GPC
+
+test:
+  <<: *defaults
+  database: GPC

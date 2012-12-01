@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  producto_id: 1
+  comercio_id: 1
+  price: 1
+
+two:
+  producto_id: 1
+  comercio_id: 1
+  price: 1
