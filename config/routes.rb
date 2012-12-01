@@ -3,4 +3,5 @@ GPC::Application.routes.draw do
 
   root :to => 'home#index'
   match 'product-search/:query' => 'search#product_search'
+  match 'calculate-list' => 'lists#calculate'
 end

@@ -2,7 +2,7 @@
 
 Comercio:
   fields:
-    default: name, lat, long
-    form: name, lat, long
+    default: name, address
+    form: name, lat, long, address
   relationships: 
   application: Application

@@ -3,7 +3,7 @@ class ListsController < ApplicationController
   end
   
   def calculate
-  	list = params[:list]
+  	list = [0,1]
   	
   	markets = Comercio.all
   	prices = []
@@ -11,7 +11,7 @@ class ListsController < ApplicationController
   	markets.each do |market|
   		total = []
   		list.each do |producto|
-  			price = Price.where("product_id = ?", producto)
+  			price = Precio.where("producto_id = ?", producto).first
   			total.push price.price
   		end
   		
