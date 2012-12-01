@@ -3,6 +3,6 @@
 Comercio:
   fields:
     default: name, address
-    form: name, lat, long, address
+    form: name, address
   relationships: 
   application: Application
