@@ -1,8 +1,8 @@
 class Precio < ActiveRecord::Base
   attr_protected :id
   
-  has_and_belongs_to_many :comercio
-  has_and_belongs_to_many :producto
+  has_and_belongs_to_many :comercios
+  has_and_belongs_to_many :productos
   
   def self.comercio_ids
     @comercio_ids = Comercio.all().map{|r| [r.name, r.id]}

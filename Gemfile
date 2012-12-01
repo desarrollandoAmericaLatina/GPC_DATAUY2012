@@ -27,3 +27,6 @@ gem "aws-sdk"
 
 # Geocode
 gem 'geocoder'
+
+# Paginator
+gem 'kaminari'
